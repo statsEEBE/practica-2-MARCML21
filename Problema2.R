@@ -28,11 +28,12 @@ prediccio
 
 #coef determinacion
 x_pred <- x
-x_pred
+x
 y_pred <- m*x_pred+b
 
 plot(x,y)
 lines(x_pred,y_pred)
+
 
 Rsq <- sum((y_pred-y_bar)^2)/sum((y-y_bar)^2)
 Rsq
@@ -47,5 +48,5 @@ summary(mod)
 
 cor.test(x,y)
 
-y_pred2 <- predict(mod, data.frame(x=x))
+y_pred2 <- predict(mod, data.frame(x=1.5))
 y_pred2
